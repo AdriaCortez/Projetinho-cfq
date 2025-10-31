@@ -1,0 +1,75 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+ .bungee-regular {
+  font-family: "Bungee", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.josefin-sans-variable {
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  background-color: rgb(15, 15, 15);
+  margin: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  padding: 10px 16px;
+  align-items: center;
+  background-color: transparent;
+  box-shadow: none;
+  flex-wrap: nowrap;
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+.Titulo {
+  margin: 0;
+  font-family: "Bungee", sans-serif;
+  font-size: 40px;
+  white-space: nowrap;
+  background: linear-gradient(90deg,#33b0d1, #5ECBB1 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+#busca {
+  background-image: linear-gradient(to right, #242424, #000000);
+  border: 1px solid #165e6b;
+  border-radius: 24px;
+  width: 250px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  margin-left: 50px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+}
+
+#busca2 {
+  flex: 1;
+  background-color: transparent;
+  color: white;
+  padding: 8px 12px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  border: none;
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  outline: none;
+
+}
