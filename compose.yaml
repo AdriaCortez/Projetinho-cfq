@@ -1,0 +1,30 @@
+
+
+services:
+  node:
+    image: node
+    ports:
+      - '3003:3000'
+      - '9003:9000'
+    volumes:
+      - ./:/atividade
+    working_dir: /atividade
+    command: './startservices.sh' #importante, aqui damos os comandos do shell para que ele rode mais raído sem a necessidade de ficar dando os comandos manualmente
+    links:
+      - mongodb_atividade
+    networks:
+      - webappnetwork
+  mongodb_atividade:
+    image: mongo
+    container_name: mongodb_atividade
+    volumes:
+        - ./data-node:/data/db
+    ports:
+        - 27017:27017
+    command: mongod --noauth
+    networks:
+        - webappnetwork
+networks:
+  webappnetwork:
+    driver: bridge
+  
